@@ -5,13 +5,11 @@
     <title></title>
   </head>
   <body>
-    <h1>Events</h1>
-
-    Listing generated at <%= @time %>
-      <ul>
-        <li>BugSmash</li>
-        <li>Hackathom</li>
-        <li>Kata Camp</li>
-      </ul>
+    <h1><%= @events.size %> Events</h1>
+    <ul>
+      <% @events.each do |event| %>
+      <li><%= event %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
